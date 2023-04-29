@@ -1,0 +1,27 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.hero {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  &__tagline {
+    @include mobile-header;
+    font-family: "Outfit Bold";
+    border-top: 0.5rem solid $blue50;
+    padding-top: 2rem;
+  }
+
+  &__button {
+    font-family: "Outfit Bold";
+    background-color: $blue300;
+    color: white;
+    border-radius: 3px;
+    width: 10rem;
+    height: 3rem;
+    margin: 1rem;
+  };
+}

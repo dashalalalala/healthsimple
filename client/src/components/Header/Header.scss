@@ -1,0 +1,15 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.header {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-family: "ReemKufi Medium";
+    font-size: 1.5rem;
+  }
+}
