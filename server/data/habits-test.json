@@ -1,0 +1,311 @@
+{
+	"users": [
+		{
+			"id": "9e5e0f4c-7327-43c5-8f4c-44e10ed9a58b",
+			"name": "Jane Smith",
+			"habits": [
+				{
+					"id": "a6c6f46f-0de8-4ba3-9bfe-8b7849eae9c1",
+					"name": "Reading",
+					"description": "Read for at least 30 minutes",
+					"frequency": "daily",
+					"streak": 5,
+					"tracked_data": [
+						{
+							"id": "f38a9a6c-70c5-47cf-856c-c4e5e7a82ee5",
+							"date": 1682939041,
+							"completed": true
+						},
+						{
+							"id": "f9a8c4d2-ece4-4d39-bcb7-5e1be38a3c80",
+							"date": 1683025441,
+							"completed": true
+						},
+						{
+							"id": "3df3b6a7-0d2d-4fb7-80ec-8fa08505b60d",
+							"date": 1683111841,
+							"completed": true
+						},
+						{
+							"id": "70a7e196-8b33-4e3c-83cb-1ad76b47e883",
+							"date": 1683198241,
+							"completed": false
+						},
+						{
+							"id": "cf8dd192-ea4b-4225-b0a9-b1a4e1c9827f",
+							"date": 1683284641,
+							"completed": false
+						},
+						{
+							"id": "72e9d48d-c12c-4a4f-9a97-f12f1e042f67",
+							"date": 1683371041,
+							"completed": false
+						},
+						{
+							"id": "72e9d48d-c12c-4a4f-9a97-f12f1e042f68",
+							"date": 1683855588,
+							"completed": false
+						},
+						{
+							"id": "31iawzz1qb5lhlhkb5y",
+							"date": 1683874800,
+							"completed": true
+						},
+						{
+							"id": "31iawzz1w7alhm46np8",
+							"date": 1683961200,
+							"completed": true
+						}
+					]
+				},
+				{
+					"id": "3b4a5d21-7d20-449f-8a0b-5eac52c9c056",
+					"name": "Water intake",
+					"description": "Drink at least 8 glasses of water",
+					"frequency": "daily",
+					"streak": 2,
+					"tracked_data": [
+						{
+							"id": "d9e0341f-6e83-4eaa-b7d3-0d34bf4f0252",
+							"date": 1682939041,
+							"completed": false
+						},
+						{
+							"id": "bd4ce5f9-8b6d-42d5-8a50-16f659d3e8a7",
+							"date": 1683025441,
+							"completed": false
+						},
+						{
+							"id": "20b57f8e-ba47-4d7e-8734-cd4db16c1f8b",
+							"date": 1683111841,
+							"completed": false
+						},
+						{
+							"id": "faa88f25-820d-4978-861a-0f84f91f9f5d",
+							"date": 1683198241,
+							"completed": false
+						},
+						{
+							"id": "7e40d725-3d3f-4797-a063-e01f91d4bdfd",
+							"date": 1683284641,
+							"completed": false
+						},
+						{
+							"id": "c988f6d9-10d8-49d2-a2dd-f3c7c714f5e3",
+							"date": 1683371041,
+							"completed": false
+						},
+						{
+							"id": "4fb9504f-e79c-4d23-a0fd-9cb11040d7a7",
+							"date": 1683457441,
+							"completed": false
+						},
+						{
+							"id": "31iawzzy6xlhjy0oq6",
+							"date": 1683858742,
+							"completed": false
+						},
+						{
+							"id": "31iawzz1ms7lhle953z",
+							"date": 1683874800,
+							"completed": false
+						},
+						{
+							"id": "31iawzz1xr4lhm72y71",
+							"date": 1683961200,
+							"completed": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "8d9b240f-7c4e-4f57-ba44-99af4b0dcedf",
+			"name": "Jane",
+			"habits": [
+				{
+					"id": "e1edfae9-074c-4687-94f7-f6d207c1ad1a",
+					"name": "Reading",
+					"description": "Read for at least 30 minutes",
+					"frequency": "daily",
+					"streak": 0,
+					"tracked_data": [
+						{
+							"id": "8c28a04a-22f3-46dc-aa79-7f2e63d437c1",
+							"date": 1682939041,
+							"completed": false
+						},
+						{
+							"id": "3e45d55e-1e02-4bb9-a0c5-09dd22a5a8bc",
+							"date": 1683025441,
+							"completed": false
+						},
+						{
+							"id": "b93c16d1-80c9-4db4-a87b-29e88a05be7f",
+							"date": 1683111841,
+							"completed": false
+						},
+						{
+							"id": "50b4bf2f-c64d-40c9-af8d-406c0c402f70",
+							"date": 1683198241,
+							"completed": false
+						},
+						{
+							"id": "bea080d3-1446-47d6-a875-0024d7be9a2d",
+							"date": 1683284641,
+							"completed": false
+						},
+						{
+							"id": "bba3f5ee-ea11-4b1c-b0e2-786660e0da8c",
+							"date": 1683371041,
+							"completed": false
+						},
+						{
+							"id": "68d3d30f-7a5d-48d6-a631-8468b7c4e61c",
+							"date": 1683457441,
+							"completed": false
+						}
+					]
+				},
+				{
+					"id": "3a8e52f2-184e-4d6e-b8f1-4b5fb8d347e6",
+					"name": "Water intake",
+					"description": "Drink at least 8 glasses of water",
+					"frequency": "daily",
+					"streak": 0,
+					"tracked_data": [
+						{
+							"id": "f06bf1b2-6a81-4c2f-a8e8-6561c48abf44",
+							"date": 1682939041,
+							"completed": false
+						},
+						{
+							"id": "c34b8f6c-30f3-4dc3-bd3d-19f82b78e8c9",
+							"date": 1683025441,
+							"completed": false
+						},
+						{
+							"id": "205a811f-5b89-49fb-85ce-82aaf443be7e",
+							"date": 1683111841,
+							"completed": false
+						},
+						{
+							"id": "fcda9552-7d2f-4752-b999-d8f64e9717f6",
+							"date": 1683198241,
+							"completed": false
+						},
+						{
+							"id": "a0e7c1a6-cf24-474a-81dc-1c7d90376891",
+							"date": 1683284641,
+							"completed": false
+						},
+						{
+							"id": "c26c4b4f-53ec-4419-9f1b-2ad8ad4a829f",
+							"date": 1683371041,
+							"completed": false
+						},
+						{
+							"id": "d49e7a16-c4dd-4e6e-8a5f-84743a557a34",
+							"date": 1683457441,
+							"completed": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "c95f775a-29c9-43c6-94dd-08d9b3c49d52",
+			"name": "Smith",
+			"habits": [
+				{
+					"id": "40a94c6f-5627-460c-99f2-8fc686986bae",
+					"name": "Reading",
+					"description": "Read for at least 30 minutes",
+					"frequency": "daily",
+					"streak": 0,
+					"tracked_data": [
+						{
+							"id": "45f5be05-9f92-47d5-a50d-1d71186aa6d2",
+							"date": 1682939041,
+							"completed": false
+						},
+						{
+							"id": "983cc71f-1029-44a7-9de8-2f4cf20c8241",
+							"date": 1683025441,
+							"completed": false
+						},
+						{
+							"id": "3f24481f-06fc-4d05-9c69-17e96e7fb4dc",
+							"date": 1683111841,
+							"completed": false
+						},
+						{
+							"id": "f2d02dd8-8a5a-4c70-8e25-5e8ee5f43e2f",
+							"date": 1683198241,
+							"completed": false
+						},
+						{
+							"id": "f18cb261-1b37-4e47-9ef3-0e4c1a1f4e44",
+							"date": 1683284641,
+							"completed": false
+						},
+						{
+							"id": "301bae9c-74d5-43e4-a7f1-d30e1dc1f82e",
+							"date": 1683371041,
+							"completed": false
+						},
+						{
+							"id": "3f3f6c2e-0777-43fc-878b-c4ab67faa2c4",
+							"date": 1683457441,
+							"completed": false
+						}
+					]
+				},
+				{
+					"id": "4f2e6785-8b08-4b1d-9e94-837a4b80fa7c",
+					"name": "Water intake",
+					"description": "Drink at least 8 glasses of water",
+					"frequency": "daily",
+					"streak": 0,
+					"tracked_data": [
+						{
+							"id": "9b9fc89a-5f12-4edf-b0b3-faee89db5ea3",
+							"date": 1682939041,
+							"completed": false
+						},
+						{
+							"id": "c9420599-c5de-45b5-aa54-3205eb3f26f2",
+							"date": 1683025441,
+							"completed": false
+						},
+						{
+							"id": "77f964a8-1e1c-461d-8e9f-0c6598122ce9",
+							"date": 1683111841,
+							"completed": false
+						},
+						{
+							"id": "a3f7047b-80a1-488e-bb56-c8a12617d8bf",
+							"date": 1683198241,
+							"completed": false
+						},
+						{
+							"id": "040b8d44-f2b8-4ecf-8282-7c3e290584f1",
+							"date": 1683284641,
+							"completed": false
+						},
+						{
+							"id": "452b6301-9693-4913-9cb9-6e727a9ebdb6",
+							"date": 1683371041,
+							"completed": false
+						},
+						{
+							"id": "9c4e067f-b7f1-423a-a30c-9c88f41e4c4c",
+							"date": 1683457441,
+							"completed": false
+						}
+					]
+				}
+			]
+		}
+	]
+}
