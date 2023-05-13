@@ -6,15 +6,27 @@ import {
 	IconButton,
 	MenuList,
 	MenuItem,
+	Text,
 } from "@chakra-ui/react";
 
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 
 function Header() {
 	return (
 		<>
 			<div className="header">
-				<h1 className="header__logo" >Healthsimple</h1>
+				<Link to="/">
+					<Text
+						className="header__logo"
+						bgGradient="linear(to-l, #63B3ED, #ADB6FF)"
+						bgClip="text"
+						fontSize="6l"
+						fontWeight="extrabold"
+					>
+						Healthsimple
+					</Text>
+				</Link>
 				<Menu>
 					<MenuButton
 						as={IconButton}
@@ -45,7 +57,7 @@ function Header() {
 							How It Works
 						</MenuItem>
 						<MenuItem fontSize={"sm"} justifyContent="flex-end">
-							Login
+							<Link to="/my-account">Login</Link>
 						</MenuItem>
 					</MenuList>
 				</Menu>

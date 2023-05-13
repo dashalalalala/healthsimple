@@ -1,22 +1,30 @@
-import { Configuration, OpenAIApi } from "openai";
+const { Configuration, OpenAIApi } = require("openai");
+require("dotenv").config();
 
 const configuration = new Configuration({
-	organization: "org-us92a0cvsnjdayMQttgi5xcd",
-	apiKey: "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",
+	organization: process.env.organizationKey,
+	apiKey: process.env.openAiApiKey,
 });
 
 const openai = new OpenAIApi(configuration);
 
-export class OpenAI {
-	constructor() {
-		this.openai = openai;
-	}
+async function getBenefits(habit, streak) {
+	const response = await openai.createCompletion({
+		model: "text-davinci-003",
+		prompt: `What are the benefits of following ${habit} for ${streak} days?`,
+		temperature: 0.7,
+		max_tokens: 100,
+		top_p: 1,
+		frequency_penalty: 0,
+		presence_penalty: 0,
+		stop: ["4"],
+	});
 
-	async createChatCompletion(message) {
-		const completion = await this.openai.createChatCompletion({
-			model: "gpt-3.5-turbo",
-			messages: [{ role: "user", content: `${message}` }],
-		});
-		return completion.data.choices[0].text;
-	}
+	console.log(response);
+
+	return response.data.choices[0].text.trim();
 }
+
+module.exports = {
+	getBenefits,
+};

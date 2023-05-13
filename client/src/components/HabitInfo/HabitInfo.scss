@@ -1,0 +1,75 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.back {
+	color: white;
+}
+
+.habit {
+	display: flex;
+	flex-direction: column;
+	background-color: $perwinkle;
+	border-radius: 4px;
+	padding: 1rem;
+	margin: 1rem;
+	box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+
+	&__title {
+		@include mobile-header;
+		font-size: 2rem;
+		font-family: "Outfit Bold";
+		color: white;
+	}
+
+	&__benefits {
+		// background-color: $hot-pink;
+		// border-radius: 4px;
+		// padding: 1rem;
+		// box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+		margin: 1rem;
+
+		&--title {
+			font-family: "Outfit Bold";
+			color: white;
+			line-height: normal;
+			padding-bottom: 1rem;
+		}
+
+		&--body {
+			background-color: $hot-pink;
+			border-radius: 4px;
+			padding: 1rem;
+			box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+			color: white;
+		}
+	}
+}
+
+.form {
+	background-color: $mint;
+	border-radius: 4px;
+	padding: 1rem;
+	margin: 1rem;
+	box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+
+	&__question {
+		margin-bottom: 1rem;
+	}
+
+	&__input {
+		padding-left: 0.5rem;
+	}
+
+	&__submit {
+		background-color: $tiffany-blue;
+		font-family: "Outfit Bold";
+		margin-top: 1rem;
+		padding: 0.5rem 3rem;
+		border-radius: 4px;
+
+		&:hover {
+			cursor: pointer;
+      background-color: $blue50;
+		}
+	}
+}
