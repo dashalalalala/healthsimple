@@ -16,6 +16,7 @@ function User() {
 			.get(`${apiUrl}/my-account/${userId}/habits`)
 			.then((response) => {
 				setUserData(response.data);
+				console.log(response.data);
 			})
 			.catch((error) => {
 				console.error(error);

@@ -5,7 +5,7 @@ function Greeting({ userData }) {
 		<div className="greeting">
 			<div className="greeting__header">
 				<h1 className="greeting__header--title">
-					Hello, {userData.name}! 👋
+					Hello, {userData.user_name}! 👋
 				</h1>
 				<h2 className="greeting__header--motivational">
 					Thank you for showing up today! It is very important to keep track of
@@ -18,5 +18,3 @@ function Greeting({ userData }) {
 }
 
 export default Greeting;
-
-

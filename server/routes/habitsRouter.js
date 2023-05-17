@@ -1,9 +1,13 @@
 const express = require("express");
 const router = express.Router();
-// const { index, singleHabit } = require("../controllers/habitsController.js");
-const habits = require("../data/habits-test.json");
+const {
+	index,
+	singleUserHabit,
+	updateHabit,
+} = require("../controllers/habitsController.js");
 
-// router.route("/").get(index);
-// router.route("/:userId/habits/:habitId").get(singleHabit);
+router.route("/habits").get(index);
+router.route("/my-account/:userId/habits/:habitId").get(singleUserHabit);
+router.route("/my-account/:userId/habits/:habitId").put(updateHabit);
 
 module.exports = router;

@@ -3,18 +3,17 @@
 @font-face {
 	font-family: "ReemKufi Medium";
 	src: url("../../assets//fonts/Reem_Kufi/ReemKufi-Medium.ttf") format(truetype);
-};
+}
 
 @font-face {
 	font-family: "Outfit Regular";
 	src: url("../../assets/fonts/Outfit/Outfit-Regular.ttf") format(truetype);
-};
+}
 
 @font-face {
 	font-family: "Outfit Bold";
 	src: url("../../assets/fonts/Outfit/Outfit-Medium.ttf") format(truetype);
-};
-
+}
 
 /*Breakpoints*/
 $breakpoint-mobile: 767px;
@@ -22,11 +21,11 @@ $breakpoint-tablet: 1279px;
 $breakpoint-desktop: 1280px;
 
 /*Colors*/
-$blue50: #BEE3F8;
-$blue200: #90CDF4;
-$blue300: #63B3ED;
-$mint: #B4F8C8;
-$hot-pink: #FFAEBC;
-$tiffany-blue:#A0E7E5;
-$yellow: #FBE7C6;
-$perwinkle: #ADB6FF;
+$blue50: #bee3f8;
+$blue200: #90cdf4;
+$blue300: #63b3ed;
+$mint: #b4f8c8;
+$hot-pink: #ffaebc;
+$tiffany-blue: #a0e7e5;
+$yellow: #fbe7c6;
+$perwinkle: #adb6ff;
