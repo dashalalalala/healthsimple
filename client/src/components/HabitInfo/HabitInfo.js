@@ -18,8 +18,6 @@ function HabitInfo() {
 			.get(`${apiUrl}/my-account/${userId}/habits/${habitId}`)
 			.then((response) => {
 				setHabitData(response.data);
-				console.log(response.data);
-				console.log(response.data.benefits[0].description);
 				setLoading(false);
 			})
 			.catch((error) => {
