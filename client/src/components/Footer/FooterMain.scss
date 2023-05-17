@@ -1,0 +1,28 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include tablet {
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	@include desktop {
+		justify-content: center;
+		gap: 1rem;
+	}
+}
+
+.links {
+	display: flex;
+	gap: 0.5rem;
+
+	&__img {
+		height: 1rem;
+		width: auto;
+	}
+}

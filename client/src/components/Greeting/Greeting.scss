@@ -1,0 +1,14 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.greeting {
+	padding: 4rem 2rem 7rem 2rem;
+	background-color: $perwinkle;
+	border-radius: 4px;
+	color: white;
+	box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+
+	&__header {
+		font-size: 1.2rem;
+	}
+}

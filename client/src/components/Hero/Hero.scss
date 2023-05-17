@@ -1,0 +1,85 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.hero {
+	padding: 0 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
+
+	@include tablet {
+		flex-direction: row;
+		padding: 0 1rem 2rem 1rem;
+	}
+
+	@include desktop {
+		flex-direction: row;
+		padding: 0 1rem 2rem 1rem;
+	}
+
+	&__tagline {
+		@include mobile-header;
+		font-family: "Outfit Bold";
+		padding: 1rem;
+	}
+
+	&__text {
+		width: 100%;
+	}
+
+	&__divider {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__body {
+		padding: 1rem 0;
+
+		&--mobile {
+			@include tablet {
+				display: none;
+			}
+
+			@include desktop {
+				display: none;
+			}
+		}
+		&--tablet-desktop {
+			display: none;
+
+			@include tablet {
+				display: block;
+				@include subheader;
+				line-height: 2.5rem;
+				padding: 1rem 2rem;
+			}
+
+			@include desktop {
+				display: block;
+				@include subheader;
+				line-height: 2.5rem;
+				padding: 1rem 2rem;
+			}
+		}
+	}
+
+	&__button {
+		font-family: "Outfit Bold";
+		background-color: $perwinkle;
+		color: white;
+		border-radius: 10px;
+		width: 15rem;
+		height: 4rem;
+		margin: 2rem;
+
+		&:hover {
+			background-color: $blue200;
+		}
+	}
+
+	&__icon {
+		width: 100%;
+		height: auto;
+	}
+}

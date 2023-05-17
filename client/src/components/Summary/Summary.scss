@@ -1,0 +1,113 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.summary-wrapper {
+	display: flex;
+	flex-direction: column;
+
+	@include tablet {
+		flex-direction: row;
+	}
+
+	@include desktop {
+		flex-direction: row;
+	}
+}
+
+.summary {
+	background-color: $blue200;
+	border-radius: 4px;
+	padding: 1rem 1rem 5rem 1rem;
+	margin: -4rem 1rem 0 1rem;
+	box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+
+	@include tablet {
+		width: -webkit-fill-available;
+		padding: 1rem;
+		margin: -4rem 1rem 1rem 1rem;
+	}
+
+	@include desktop {
+		width: -webkit-fill-available;
+		padding: 1rem;
+		margin: -4rem 1rem 1rem 1rem;
+	}
+
+	&__today {
+		@include mobile-header;
+		font-family: "Outfit Bold";
+		color: white;
+	}
+
+	&__date {
+		@include mobile-header;
+		font-size: 5rem;
+		color: white;
+		font-family: "Outfit Bold";
+		padding-top: 1rem;
+	}
+
+	&__day {
+		@include mobile-header;
+		padding-top: 1rem;
+		color: white;
+	}
+}
+
+.habits {
+	background-color: $hot-pink;
+	margin: -4rem 2rem 1rem 2rem;
+	border-radius: 4px;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+
+	@include tablet {
+		width: -webkit-fill-available;
+	}
+
+	@include desktop {
+		width: -webkit-fill-available;
+	}
+
+	&__title {
+		@include mobile-header;
+		font-size: 2rem;
+		font-family: "Outfit Bold";
+		color: white;
+	}
+
+	&__item {
+		color: white;
+		font-size: 1.5rem;
+		padding: 0.5rem 1rem;
+
+		&:hover {
+			background-color: $yellow;
+			color: $blue300;
+			border-radius: 4px;
+		}
+	}
+}
+
+.space-filler {
+	display: none;
+
+	@include tablet {
+		display: flex;
+		justify-content: center;
+		padding: 1rem;
+	}
+
+	@include desktop {
+		display: flex;
+		justify-content: center;
+		padding: 1rem;
+	}
+
+	&__image {
+		width: 25rem;
+		height: auto;
+	}
+}
