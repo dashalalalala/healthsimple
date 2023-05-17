@@ -16,7 +16,7 @@ If you go to User Page:
 
 - You will see the data for a given user from the database
 - You will be able to click on a habit to see the benefits and to update your completion status
-- Benefits data for streaks "0" and "1" is already in the database. At this moment, if you try to click "Completed" it will update the streak to "2" and request to openAI will be submitted.
+- Benefits data for streaks "0" and "1" is already in the database. At this moment, if you try to click "Completed" for users with current streak as "1" it will update the streak to "2" and request to openAI will be submitted.
 
 # Next Steps
 
