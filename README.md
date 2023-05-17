@@ -80,14 +80,36 @@ openAiApiKey= available upon request
 
 #### MySQL Database
 
-#### !IMPORTANT: If you are having an issue with authentication, please consider switching to mysql2. It is already included in dependencies. If you are still having issues, please reach out to me.
-
 - 1.) Turn on SQL server
 - 2.) Log into SQL (mysql -u USERNAMEFROMINSTALL -p PASSWORDFROMINSTALL)
 - 3.) Run CREATE DATABASE healthsimple_database; in mysql
 - 4.) Update .env folder with above for DBNAME, USER and PASSWORD
 - 5.) Then in terminal in project window, knex migrate:latest and knex seed:run
 - 6.) You should then be able to nodemon index.js and the server will be up and running
+
+#### !IMPORTANT: If you are having an issue with authentication, please try the following: 
+
+1. Open the MySQL shell and create a new user:
+
+    ```sql
+    CREATE USER 'newuser'@'localhost' IDENTIFIED WITH mysql_native_password BY 'newpassword';
+    ```
+
+    Replace `'newuser'` and `'newpassword'` with your chosen username and password.
+
+3. Grant all privileges to the new user:
+
+    ```sql
+    GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'localhost';
+    FLUSH PRIVILEGES;
+    ```
+
+4. Exit the MySQL shell.
+5. Update your .env file with new username and password
+
+Alternatively you can consider switching to mysql2. It is already included in the dependencies.
+
+#### If you are still having issues, please reach out to me.
 
 # Getting Started with Create React App
 
