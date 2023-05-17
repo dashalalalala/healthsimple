@@ -8,7 +8,6 @@ import { useParams } from "react-router-dom";
 
 function User() {
 	const [userData, setUserData] = useState(null);
-	const [habitData, setHabitData] = useState(null);
 	const { userId } = useParams();
 
 	useEffect(() => {
@@ -16,12 +15,11 @@ function User() {
 			.get(`${apiUrl}/my-account/${userId}/habits`)
 			.then((response) => {
 				setUserData(response.data);
-				console.log(response.data);
 			})
 			.catch((error) => {
 				console.error(error);
 			});
-	}, [userId, habitData]);
+	}, [userId]);
 
 	if (userData) {
 		return (
