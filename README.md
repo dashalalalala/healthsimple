@@ -80,9 +80,11 @@ openAiApiKey= available upon request
 
 #### MySQL Database
 
-- 1.) Turn on SQL server (use SQL notifier from install)
-- 2.) Log into SQL (mysql -u USERNAMEFROMINSTALL -p PASSWORDFROM INSTALL)
-- 3.) Run CREATE DATABASE healthsimple in mysql
+#### !IMPORTANT: If you are having an issue with authentication, please consider switching to mysql2. It is already included in dependencies. If you are still having issues, please reach out to me.
+
+- 1.) Turn on SQL server
+- 2.) Log into SQL (mysql -u USERNAMEFROMINSTALL -p PASSWORDFROMINSTALL)
+- 3.) Run CREATE DATABASE healthsimple_database; in mysql
 - 4.) Update .env folder with above for DBNAME, USER and PASSWORD
 - 5.) Then in terminal in project window, knex migrate:latest and knex seed:run
 - 6.) You should then be able to nodemon index.js and the server will be up and running

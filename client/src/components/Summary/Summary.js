@@ -38,7 +38,7 @@ function Summary({ userData }) {
 					</div>
 				</div>
 				<div className="space-filler">
-					<img className="space-filler__image" src={fillerImage}></img>
+					<img className="space-filler__image" src={fillerImage} alt=""></img>
 				</div>
 			</div>
 		);
