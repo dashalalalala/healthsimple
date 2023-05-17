@@ -1,6 +1,6 @@
 # Healthsimple
 
-Introducing highly-motivational habit tracker Healthsimple, a simple tool to help you develop healthy habits and stay motivated. Whether you want to drink more water, exercise regularly, or maybe quit a bad habit, our tracker provides personalized benefits for keeping up with your habits over time. With the power of OpenAI's GPT API, you'll receive customized insights on the benefits of keeping up with your habit for each day, week, month, and even year, keeping you motivated and on track.
+Introducing highly-motivational habit tracker Healthsimple, a simple tool to help you develop healthy habits and stay motivated. Whether you want to drink more water, exercise regularly, or maybe quit a bad habit, my tracker provides personalized benefits for keeping up with your habits over time. With the power of OpenAI's GPT API, you'll receive customized insights on the benefits of keeping up with your habit for each day, week, month, and even year, keeping you motivated and on track.
 
 # Status Update
 
