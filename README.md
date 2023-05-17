@@ -58,9 +58,10 @@ All requests that can be made with my project at this time can be found [here](h
 
 #### .env
 
-Copy this file to an .env file in the server folder and replace the values with your own local configuration.
-​
-//Database Authorization
+- Copy this file to an .env file in the server folder and replace the values with your own local configuration.
+  ​
+
+#### Database Authorization
 
 ```
 PORT=4000
@@ -70,7 +71,7 @@ DB_LOCAL_USER='root'
 DB_LOCAL_PASSWORD='your local password'
 ```
 
-//OpenAI Authorization
+#### OpenAI Authorization
 
 ```
 organizationKey =  available upon request
@@ -78,8 +79,6 @@ openAiApiKey= available upon request
 ```
 
 #### MySQL Database
-
-​
 
 - 1.) Turn on SQL server (use SQL notifier from install)
 - 2.) Log into SQL (mysql -u USERNAMEFROMINSTALL -p PASSWORDFROM INSTALL)
