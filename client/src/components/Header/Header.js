@@ -34,10 +34,9 @@ function Header() {
 						icon={<HamburgerIcon boxSize={8} />}
 						variant="unstyled"
 						color={"blue.100"}
-						// size={"lg"}
 					/>
 					<MenuList>
-						<MenuItem
+						{/* <MenuItem
 							fontSize={"sm"}
 							background={"none"}
 							justifyContent="flex-end"
@@ -55,9 +54,11 @@ function Header() {
 							borderBottomColor={"blue.100"}
 						>
 							How It Works
-						</MenuItem>
+						</MenuItem> */}
 						<MenuItem fontSize={"sm"} justifyContent="flex-end">
-							<Link to="/my-account">Login</Link>
+							<Link to="/my-account/c95f775a-29c9-43c6-94dd-08d9b3c49d52/habits">
+								Login
+							</Link>
 						</MenuItem>
 					</MenuList>
 				</Menu>

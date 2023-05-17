@@ -4,39 +4,29 @@ import { apiUrl } from "../../utils";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import Typist from "react-typist-component";
+import fillerImage from "../../assets/icons/undraw_playful_cat.svg";
 
 function HabitInfo() {
 	const [habitData, setHabitData] = useState(null);
 	const [completed, setCompleted] = useState(false);
-	const [benefitsData, setBenefitsData] = useState(null);
-	const [loading, setLoading] = useState(true); // loading state
+	const [loading, setLoading] = useState(true);
 	const { habitId } = useParams();
 	const { userId } = useParams();
 
-	const habitBenefits =
-		benefitsData &&
-		benefitsData[habitData.name] &&
-		benefitsData[habitData.name][habitData.streak]
-			? benefitsData[habitData.name][habitData.streak]
-			: null;
-
-	console.log("habit benefits", habitBenefits);
-
 	useEffect(() => {
-		Promise.all([
-			axios.get(`${apiUrl}/my-account/${userId}/habits/${habitId}`),
-			axios.get(`${apiUrl}/benefits`),
-		])
-			.then(([habitResponse, benefitsResponse]) => {
-				setHabitData(habitResponse.data);
-				setBenefitsData(benefitsResponse.data);
-				setLoading(false); // Updating loading state when requests are done
+		axios
+			.get(`${apiUrl}/my-account/${userId}/habits/${habitId}`)
+			.then((response) => {
+				setHabitData(response.data);
+				console.log(response.data);
+				console.log(response.data.benefits[0].description);
+				setLoading(false);
 			})
 			.catch((error) => {
-				console.error(error);
+				console.error("Error fetching habit data:", error);
 				setLoading(false);
 			});
-	}, [habitId]);
+	}, [habitId, userId]);
 
 	const handleFormSubmit = async (e) => {
 		e.preventDefault();
@@ -45,20 +35,18 @@ function HabitInfo() {
 			return;
 		}
 
-		const currentDate = new Date();
-		currentDate.setHours(0, 0, 0, 0); // Set the time to 00:00:00 for PUT Request to avoid duplicating tracked data generation
+		const currentDate = new Date().toISOString().split("T")[0];
 
 		try {
-			const trackedDataResponse = await axios.put(
-				`${apiUrl}/my-account/${userId}/habits/${habitId}/tracked-data`,
-				{
-					completed: completed,
-					date: currentDate.getTime() / 1000, // Convert to Unix timestamp
-				}
-			);
+			await axios.put(`${apiUrl}/my-account/${userId}/habits/${habitId}`, {
+				completed: completed,
+				date: currentDate,
+			});
 
 			if (completed) {
 				alert("Congratulations on completing your habit for today!");
+			} else {
+				alert("Don't worry, keep trying! You can do it!");
 			}
 
 			// Fetch the habit data after updating the tracked data
@@ -66,71 +54,67 @@ function HabitInfo() {
 				`${apiUrl}/my-account/${userId}/habits/${habitId}`
 			);
 
-			setHabitData((oldHabitData) => ({
-				...oldHabitData,
-				tracked_data: [...oldHabitData.tracked_data, habitResponse.data],
-				streak: completed
-					? oldHabitData.streak + 1
-					: Math.max(0, oldHabitData.streak - 1),
-			}));
-
-			const benefitsResponse = await axios.get(`${apiUrl}/benefits`);
-			setBenefitsData(benefitsResponse.data);
-			console.log(benefitsResponse.data);
+			// Update the habit data state
+			setHabitData(habitResponse.data);
 		} catch (error) {
 			console.error(error);
 		}
 	};
 
-	if (loading) {
-		return <div>Loading...</div>;
-	}
+	if (loading) return <div>Loading</div>;
 
-	if ((habitData, benefitsData))
+	if (habitData)
 		return (
-			<div className="habit">
-				<Link to={`/my-account/${userId}/habits`}>
-					<p className="back">🏃 Go Back</p>
-				</Link>
-				<h1 className="habit__title">{habitData.name}</h1>
-				<form className="form" onSubmit={handleFormSubmit}>
-					<p className="form__question">
-						Have you completed your habit today? 🫶
-					</p>
-					<input
-						type="radio"
-						id="yes"
-						name="completed"
-						value="Yes"
-						onChange={() => setCompleted(true)}
-					/>
-					<label className="form__input" htmlFor="yes">
-						Yes 🥳
-					</label>
-					<br />
-					<input
-						type="radio"
-						id="no"
-						name="completed"
-						value="No"
-						onChange={() => setCompleted(false)}
-					/>
-					<label className="form__input" htmlFor="no">
-						No 😔
-					</label>
-					<br />
-					<input className="form__submit" type="submit" value="Submit" />
-				</form>
-				<div className="habit__benefits">
-					<h2 className="habit__benefits--title">
-						Here are the benefits of following this habit for {habitData.streak}{" "}
-						days:
-					</h2>
-					<p className="habit__benefits--body">
-						{habitBenefits && (
-							<Typist key={habitBenefits}>{habitBenefits}</Typist>
-						)}
-					</p>
+			<div>
+				<div className="habit">
+					<Link to={`/my-account/${userId}/habits`}>
+						<p className="back">🏃 Go Back</p>
+					</Link>
+					<h1 className="habit__title">{habitData.habit_name}</h1>
+					<form className="form" onSubmit={handleFormSubmit}>
+						<p className="form__question">
+							Have you completed your habit today? 🫶
+						</p>
+						<input
+							type="radio"
+							id="yes"
+							name="completed"
+							value="Yes"
+							onChange={() => setCompleted(true)}
+						/>
+						<label className="form__input" htmlFor="yes">
+							Yes 🥳
+						</label>
+						<br />
+						<input
+							type="radio"
+							id="no"
+							name="completed"
+							value="No"
+							onChange={() => setCompleted(false)}
+						/>
+						<label className="form__input" htmlFor="no">
+							No 😔
+						</label>
+						<br />
+						<input className="form__submit" type="submit" value="Submit" />
+					</form>
+					<div className="habit__benefits">
+						<h2 className="habit__benefits--title">
+							Here are the benefits of following this habit for{" "}
+							{habitData.streak} days:
+						</h2>
+						<p className="habit__benefits--body">
+							{habitData.benefits && (
+								<Typist key={habitData.benefits[0].description}>
+									{habitData.benefits[0].description}
+								</Typist>
+							)}
+						</p>
+					</div>
+				</div>
+				<div className="space-filler">
+					<img className="space-filler__image" src={fillerImage}></img>
 				</div>
 			</div>
 		);

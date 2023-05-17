@@ -2,11 +2,11 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import User from "./pages/User/User";
-
+import HabitInfo from "./components/HabitInfo/HabitInfo";
+import NotFound from "./components/NotFound/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./styles/theme.js";
-import HabitInfo from "./components/HabitInfo/HabitInfo";
 
 function App() {
 	return (
@@ -21,6 +21,7 @@ function App() {
 							path="/my-account/:userId/habits/:habitId"
 							element={<HabitInfo />}
 						/>
+						<Route path="*" element={<NotFound />} />
 					</Routes>
 				</BrowserRouter>
 			</div>

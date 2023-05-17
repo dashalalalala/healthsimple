@@ -1,12 +1,12 @@
 import "./Home.scss";
 import Hero from "../../components/Hero/Hero";
-import Main from "../../components/Main/Main";
+import FooterMain from "../../components/Footer/FooterMain";
 
 function Home() {
 	return (
 		<div className="home">
 			<Hero />
-			{/* <Main /> */}
+			<FooterMain />
 		</div>
 	);
 }

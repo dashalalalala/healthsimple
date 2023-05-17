@@ -1,11 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
-const uniqid = require("uniqid");
-const jsonRouter = require("./routes/jsonRouter");
+const habitsRouter = require("./routes/habitsRouter");
+const usersRouter = require("./routes/usersRouter");
+const benefitsController = require("./routes/benefitsRouter");
 
 const app = express();
 const port = 4000;
+
+require("dotenv").config();
 
 app.use(cors());
 app.use(express.json());
@@ -22,7 +25,9 @@ app.use((req, res, next) => {
 	next();
 });
 
-app.use("/", jsonRouter);
+app.use("/", usersRouter);
+app.use("/", habitsRouter);
+app.use("/", benefitsController);
 
 app.listen(port, () => {
 	console.log(`App is listening on PORT ${port}`);
